@@ -2,7 +2,7 @@
 ## usage
 ```
 g++ main.cpp -O3 -o main
-./main <file> <k> <s>
+./main <file> <k> <\theta>
 ```
 e.g.
 ```

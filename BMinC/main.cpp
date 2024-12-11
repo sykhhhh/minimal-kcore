@@ -8,14 +8,23 @@ int paramK;
 int paramQ;
 int main(int argc, char *argv[])
 {
-    if (argc < 4)
+    if (argc < 3)
     {
-        printf("3 params are required: $./enumdp graph_path k q !!! \n");
+        printf("2 params are required: $./enumdp graph_path k !!! \n");
         exit(1);
     }
-    file_path = string(argv[1]);
-    paramK = atoi(argv[2]);
-    paramQ = atoi(argv[3]);
+    if (argc == 3)
+    {
+        file_path = string(argv[1]);
+        paramK = atoi(argv[2]);
+        paramQ = 1e9;
+    }
+    else
+    {
+        file_path = string(argv[1]);
+        paramK = atoi(argv[2]);
+        paramQ = atoi(argv[3]);
+    }
     g.readFromFile(file_path);
 
 

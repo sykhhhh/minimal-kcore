@@ -134,7 +134,6 @@ public:
 	bool is_minimal()
 	{
 		if(sz==0) return 0;
-		return 1;
 		for(int v:vertices_id)
 		{
 			int cnt=0;
